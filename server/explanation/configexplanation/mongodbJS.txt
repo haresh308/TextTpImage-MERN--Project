@@ -1,0 +1,22 @@
+import mongoose from "mongoose"; 
+
+const ConnectDB = async () => {
+
+   mongoose.connection.on('connected' , () => {
+     console.log("Database Connected");
+   })    //it is an event listener where we can make sure that the database is connected  if it conected it send DAtabase connected message 
+
+
+
+    
+try {
+    await mongoose.connect(`${process.env.MONGODB_URI}/imagify`)
+      //we use async so we have to use await  the mongodb_uri is the database we created  and it connected with it by the project name imagify
+    
+} catch (err) {
+    console.error("Failed to connect to MongoDB: ", err.message);
+    process.exit(1); // Exit process with failure
+}
+}
+
+export default ConnectDB;

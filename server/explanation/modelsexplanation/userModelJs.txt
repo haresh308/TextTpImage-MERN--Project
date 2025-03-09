@@ -1,0 +1,33 @@
+
+we are creating schema for user who are trying to login 
+
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({  //schema means structure for how the data format must be 
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true,
+        unique:true //we cannot save user with the same email id 
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    creditBalance:{
+        type:Number,
+        default:5
+    }
+})
+
+const userModel = mongoose.models.user || mongoose.model("user",userSchema)  
+//the or operator makes sure that the models dosent execute continiousy first it searches for the exsisting model user 
+//it it is available  it uses that model  if it wasnt available then it creates the user Schema
+
+export default userModel  ;
+
+
+Using this userModel user can login logout from accounts  

@@ -1,0 +1,9 @@
+npm i express cors dotenv nodemon form-data jsonwebtoken mongoose bcrypt razorpay
+
+//cors allows  us to connect our backened server with frontend 
+//dot env helps us to create dotenv file and use it in backened server 
+//jsonwebtoken adds authentication in our project 
+//mongoose connect out backned server with mongoDb database
+//axios help us to make api call
+//bcrypt  using that we can encrypt the password 
+//razorpay helps us to make online payment gateway 

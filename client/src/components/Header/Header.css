@@ -1,0 +1,21 @@
+/* #Header-text{
+    background: none;
+    outline: none;
+    display: none;
+} */
+#span-text{
+    
+        font-weight: 400; /* Bold text */
+        text-transform: uppercase; /* Optional: Make the text uppercase */
+        background: linear-gradient(to right, #ff12ef, #8a2be2); /* Neon blue to purple gradient */
+        -webkit-background-clip: text; /* Clips gradient to the text */
+        -webkit-text-fill-color: transparent; /* Makes text transparent to reveal gradient */
+        
+      
+      
+}
+
+#text{
+    font-size: 20px;
+    color: #ffff;
+}
